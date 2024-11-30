@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Información del Producto</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--iconos (estrellas)-->
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ingreso" href="login.html">Ingresar</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="usuarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="nav-link" id="usuarioMostrado"></span>
+              </a>
+              <!-- Se agrega menu desplegable !-->
+              <ul class="dropdown-menu" aria-labelledby="usuarioDropdown">
+                <li><a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart"></i> Mi carrito
+                  <span class="badge bg-danger" id="cantCarrito"></span></a></li>
+                <li><a class="dropdown-item" href="my-profile.html"><i class="fas fa-solid fa-user"></i> Mi perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="login.html" id="cerrarSesion">Cerrar sesión</a></li>
+              </ul>
+            </li>
+            <a class="nav-link position-relative" href="cart.html">
+              <i class="fas fa-shopping-cart"></i>
+              <!-- Contador de productos en el carrito con una clase -->
+              <span class="badge bg-danger cart-count"></span>
+          </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <main>
+    <div class="container my-4">
+      <div class="product-info">
+        <h1 id="product-name">Nombre del Producto</h1>
+        <p id="product-description">Descripción del Producto</p>
+        <p id="product-category">Categoría: <span id="category-name">Nombre de la Categoría</span></p>
+        <p id="product-sold">Cantidad Vendida: <span id="sold-quantity">0</span></p>
+        <p>Precio: <span id="product-currency"></span> <span id="product-cost">0</span></p>
+        <div class="images" id="product-images">
+          <!-- Imágenes del producto -->
+        </div>
+      </div>
+    </div>
+    <div id="divBtnComprar">
+      <button id="botonComprar" class="buy-button">¡Comprar!</button>
+    </div>
+    <div id="publicarComentario">
+      <div>
+          <h2>Déjanos tu opinión sobre el producto:</h2>
+          <p>
+            <label for="comentarioUsuario">Comentario:</label>
+            <textarea id="comentarioUsuario" name="comentario" rows="2" cols="50"></textarea>
+          </p>
+          <p>
+              Puntuación: 
+              <span class="puntuacion" id="filaEstrellas"> 
+                  <i class="bi bi-star-fill star"></i> 
+                  <i class="bi bi-star-fill star"></i>
+                  <i class="bi bi-star-fill star"></i>
+                  <i class="bi bi-star-fill star"></i>
+                  <i class="bi bi-star-fill star"></i>
+              </span>
+          </p>
+          <button type="button" id="enviarComentario" class="btn btn-primary">Calificar</button>
+      </div>
+  </div>
+  <div>
+    <h3> Todos los comentarios: </h3>
+  <div id="nuevosComentarios" class="container my-4"></div>
+    <div id="comentarios" class="container my-4"> </div>
+    <h4> Productos relacionados: </h4>
+    <div id="related-products" class="row"> </div> 
+    </div>
+
+  </main>
+
+  <footer id="footerProducto" class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+    </div>
+  </footer>
+
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--sweet alert-->
+</body>
+
+</html>

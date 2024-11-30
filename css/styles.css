@@ -1,0 +1,777 @@
+/* Aplicación de la fuente 'Verdana' a varios elementos, asegurando su prioridad con !important */
+.jumbotron,
+.card-body,
+.container,
+.site-header,
+.login-container,
+.form-group {
+  font-family: 'Verdana', serif !important;
+}
+
+/* Estilo para los encabezados dentro de jumbotron, haciéndolos negrita */
+.jumbotron .display-4 {
+  font-weight: bold;
+}
+
+/* Remover subrayado de los enlaces en la navegación */
+nav a {
+  text-decoration: none;
+}
+
+/* Estilo para elementos con clase bd-placeholder-img */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Media query para pantallas medianas hacia arriba */
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/* Estilos para la jumbotron */
+.jumbotron {
+  height: 50vh; /* Altura de la jumbotron */
+  padding: 5em inherit; /* Padding interno */
+  margin-bottom: 0; /* Sin margen inferior */
+  background-color: #53C0FB; /* Color de fondo */
+  background: url('../img/cover_back.png'); /* Imagen de fondo */
+  background-size: cover; /* Ajustar tamaño de fondo */
+  background-position: center; /* Centrar imagen de fondo */
+  background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  color: black; /* Color del texto */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Media query para ajustar padding en pantallas medianas hacia arriba */
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Eliminar margen inferior del último párrafo dentro de jumbotron */
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilo para el encabezado dentro de jumbotron */
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+/* Estilos para el contenedor dentro de jumbotron */
+.jumbotron .container {
+  max-width: 40rem; /* Ancho máximo */
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+  border-radius: 10px; /* Bordes redondeados */
+  text-shadow: 1px 1px 2px grey; /* Sombra del texto */
+}
+
+/* Tamaño de fuente para elementos con clase lead dentro de jumbotron */
+.jumbotron .lead {
+  font-size: 38px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #333;
+  color: #ccc;
+  text-align: center;
+}
+
+footer p.float-end {
+  margin: 0;
+}
+
+/* Margen inferior para párrafos dentro del pie de página */
+footer p {
+  margin-bottom: .25rem;
+  color:#ccc;
+}
+/*enlaces del footer*/
+footer a {
+  color: #0087F7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Color y transición para enlaces dentro de site-header */
+.site-header a {
+  color: white;
+  transition: ease-in-out color .15s;
+}
+
+/* Color para enlaces dentro de dropdown-menu en site-header */
+.site-header .dropdown-menu a {
+  color: black;
+}
+
+/* Estilo para dropzone (área de arrastrar y soltar archivos) */
+.dropzone {
+  border: 2px dashed #0087F7;
+  border-radius: 5px;
+  background: white;
+}
+
+/* Ajuste de altura máxima para imágenes con clase img-fit */
+.img-fit {
+  max-height: 100%;
+}
+
+/* Estilos para alertas */
+.alert {
+  position: fixed;
+  top: 150px;
+  width: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgb(250, 254, 252);
+  border-color: black;
+  color: black;
+}
+
+/* Estilos para el spinner de carga */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+}
+
+/* Cambiar cursor a pointer cuando está activo */
+.cursor-active {
+  cursor: pointer;
+}
+
+/* Estilo para elementos con clase left */
+.left {
+  float: left;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para los divs dentro de lds-ring para animación */
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Retrasos de animación para los diferentes divs de lds-ring */
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+/* Keyframes para la animación de rotación del spinner */
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+/* Estilos para el contenedor del spinner */
+#spinner-wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1021;
+  display: none; /* Oculto por defecto */
+}
+
+/* Altura mínima para el elemento main */
+main {
+  min-height: calc(90vh - 210px);
+}
+
+/* Estilos para enlaces con clase custom-card, asegurando que hereden colores y sin subrayado */
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Color para elementos con clase checked */
+.checked {
+  color: orange;
+}
+
+/* Estilo para las imágenes de autos */
+.imagenProductos{
+  width:20%; /* Ancho del 20% del contenedor */
+}
+
+/* Estilos generales para todas las imágenes */
+img { 
+  width: 100%; /* Ancho completo del contenedor */
+  float:left; /* Flotar a la izquierda */
+  padding: 15px; /* Espaciado interno */
+}
+
+/* Alinear el texto de los encabezados h4 al centro */
+h4 {
+  text-align: center;
+}
+
+@media (min-width: 768px){ /* tablet */
+  .alert{
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%
+  }
+  .imagenProductos {
+    width: 40%; /* La imagen ocupará todo el ancho del contenedor en celulares */
+    order: -1; /* La imagen se mostrará primero en el orden de la columna */
+  }
+}
+
+@media (max-width: 767px){ /* celular */
+  .alert{
+    width: 90%;  /* el campo de iniciar sesion ocupa el 90% de la pagina cuando es mas chica que tablet*/
+    padding: 0%; /* hace que no tenga margen interior en los lados y entren las imagenes de contraseña*/
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  #password, #username{
+    max-width: 100%; /* para que los cuadros input no se salgan*/
+  }
+  table{
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 1366px){ /* estandar */
+  .alert{
+    width: 25%;
+  }
+  .imagenProductos {
+    width: 20%; /* La imagen ocupará todo el ancho del contenedor en celulares */
+    order: -1; /* La imagen se mostrará primero en el orden de la columna */
+  }
+}
+
+/* Media Query para dispositivos móviles con ancho máximo de 768px */
+@media (max-width: 767px) {
+  /* Reducir el tamaño del texto en elementos con clase lead dentro de jumbotron */
+  .jumbotron .lead {
+    font-size: 24px; /* Ajuste del tamaño del texto en celulares */
+  }
+
+  /* Reducir el padding del contenedor dentro de jumbotron */
+  .jumbotron .container {
+    padding: 10px;
+  }
+
+  /* Ajustar el ancho y el orden de las imágenes en móviles */
+  .imagenProductos {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor en celulares */
+    order: -1; /* La imagen se mostrará primero en el orden de la columna */
+  }
+
+  /* Reducir el tamaño de fuente en elementos con clase bd-placeholder-img */
+  .bd-placeholder-img {
+    font-size: 0.875rem; /* Reducción del tamaño del texto en celulares */
+  }
+
+  /* Reducir el padding lateral del contenedor principal */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Alinear el texto de jumbotron al centro en pantallas pequeñas */
+  .jumbotron {
+    text-align: center; /* Alinea el texto en el centro para pantallas pequeñas */
+  }
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Invierte los colores si usas un fondo blanco y quieres que las flechas sean oscuras */
+}
+
+#searchInput {
+  width: 20%; /* Hace que el campo de búsqueda ocupe todo el ancho disponible. */
+  padding: 10px; /* Añade espacio dentro del campo de texto. */
+  font-size: 16px; /* Tamaño de la fuente del texto dentro del input. */
+}
+
+/*agregamos estilo a los botones de navegación.*/
+.nav-link {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #0087F7; /* Azul claro */
+  color: white;
+}
+
+/*Estilo a las barras de navegación. Fondo degradado y sombras*/
+.navbar {
+  background: linear-gradient(90deg, #333, #000);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*Encabezados y descripciones del producto. Esto afecta a la página de product-info*/
+h1, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  text-align: center;
+}
+
+h1, p {
+  font-family: 'Raleway', sans-serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+#product-description, #category-name, #sold-quantity {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/*estilo para las imágenes del producto*/
+#product-images img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#product-images img:hover {
+  transform: scale(1.05);
+}
+
+/*Dale estilo a los botones de ordenamiento para que se vean más llamativos y claros.*/
+
+.btn-group-toggle .btn {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-group-toggle .btn:hover, .btn-group-toggle .btn:focus {
+  background-color: #0087F7;
+  color: white;
+  border-color: #007bff;
+}
+
+.form-control {
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #0087F7;
+  box-shadow: 0 0 0 0.2rem rgba(0,135,247,0.25);
+}
+
+#rangoFiltroPrecio {
+  background-color: #0087F7;
+  color: white;
+}
+
+#rangoFiltroPrecio:hover {
+  background-color: #0056b3;
+}
+
+/*fuente moderna y sombras suaves en los textos para que destaquen.*/
+#prod-list-container {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Contenedor principal del formulario */
+#publicarComentario {
+  background-color: #f9f9f9;  /* Fondo claro para el contenedor */
+  border-radius: 10px;  /* Esquinas redondeadas */
+  padding: 20px;  /* Espacio interno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+  max-width: 500px;  /* Ancho máximo */
+  margin: 20px auto;  /* Centrado en la página */
+}
+
+/* Título del formulario */
+#publicarComentario h2 {
+  font-size: 24px;  /* Tamaño del texto */
+  color: #333;  /* Color oscuro */
+  margin-bottom: 15px;  /* Espacio debajo del título */
+}
+
+.star {
+  font-size: 24px;  /* Tamaño de las estrellas */
+  cursor: pointer;  /* Cambiar cursor al pasar */
+  transition: transform 0.2s;  /* Transición suave al pasar */
+  color:#666;
+}
+
+.fa-star {
+  color:#666;
+}
+
+.checked {
+  color: gold;
+}
+
+h3 {
+  margin-top: 50px;
+  text-align: center;
+  color:#007bff;
+}
+
+#related-products {
+  display: flex; 
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas si es necesario */
+  justify-content: center; 
+  margin: 20px 0; /* Espacio superior e inferior para el contenedor */
+}
+
+h4 {
+  text-align: center;
+  color:#007bff;
+}
+
+/*apartado para perfil de usuario*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Estilos para el modo oscuro */
+
+.dark-mode {
+  background-color: black; 
+  color: white;            
+}
+
+.dark-mode h4 {
+  color:aqua;
+}
+
+nav.dark-mode {
+  background-color: #1c1c1c;
+}
+
+/* Inputs y formularios en modo oscuro */
+input.dark-mode {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+label.dark-mode {
+  color: #e0e0e0;
+}
+
+/*botón comprar */
+
+#botonComprar {
+  background: linear-gradient(50deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+}
+
+#botonComprar:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#botonComprar:active {
+  transform: scale(0.98);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#divBtnComprar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+
+/* Estilos generales para el carrito */
+#cart-items {
+  display: flex;
+  flex-direction: column; /* Apilar los elementos verticalmente */
+  align-items: stretch; /* Asegura que los elementos dentro de cart-items ocupen todo el ancho */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+/* Estilos para la tabla del carrito */
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e8f0fe;
+}
+
+thead th {
+  color: #007bff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 12px;
+  border-bottom: 2px solid #e2e6ea;
+}
+
+tbody td {
+  padding: 15px;
+  vertical-align: middle;
+  border-top: 1px solid #e2e6ea;
+}
+
+tbody td:last-child {
+  color: #dc3545;
+  cursor: pointer;
+}
+
+tbody td:last-child:hover {
+  color: #c82333;
+  text-decoration: underline;
+}
+
+/* Centrado y estilo para precios y subtotales */
+.text-center {
+  text-align: center;
+}
+
+#grand-total {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #007bff;
+}
+
+tfoot tr {
+  border-top: 2px solid #e2e6ea;
+}
+
+/* Botón 'Volver arriba' */
+.float-end a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.float-end a:hover {
+  text-decoration: underline;
+}
+
+/* Sección de Envío y Dirección */
+.section h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.section .form-group {
+  margin-bottom: 20px;
+}
+
+#tipoEnvio {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #495057;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.form-check-label {
+  font-size: 14px;
+}
+
+/* Estilo para los botones de acción */
+.btn-finalizar {
+  width: 30%;
+  align-items: center;
+  align-self: center;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-finalizar:hover {
+  background-color: #0004ff;
+}
+
+/* Costos finales */
+.mt-3 p {
+  font-size: 16px;
+  color: #495057;
+}
+
+.mt-3 span {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+/* Adaptaciones para pantallas pequeñas */
+@media (max-width: 768px) {
+  #cart-items {
+    padding: 15px;
+  }
+
+  thead th, tbody td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* Ocultar la columna de imágenes en pantallas pequeñas */
+  thead th:first-child, tbody td:first-child {
+    display: none;
+  }
+
+  /* Ajustar el tamaño del total general */
+  #grand-total {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  /* Mejorar la visibilidad de los botones y formularios */
+  .section h4 {
+    font-size: 16px;
+  }
+}
+
+/* Ajustes para las filas dentro de la tabla */
+table.table tbody tr {
+  height: 60px; /* Altura uniforme de las filas */
+  transition: background-color 0.3s ease; /* Efecto al pasar el ratón por encima */
+  display: table-row; /* Asegura que cada fila sea un "row" de la tabla */
+}
+
+table.table tbody td {
+  padding: 12px; /* Espaciado dentro de las celdas */
+  vertical-align: middle; /* Alineación vertical del texto */
+  font-size: 14px; /* Tamaño de fuente uniforme */
+  border-top: 1px solid #e2e6ea; /* Borde superior para las filas */
+  word-wrap: break-word; /* Evita el desbordamiento de texto */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+/* Asegura que el enlace cubra toda la card */
+.card-link {
+  display: block; /* El enlace cubre toda la card */
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hereda el color del texto para no cambiarlo */
+}
+
+/* Cuando el mouse pasa sobre el enlace */
+.card-link:hover {
+  background-color: #f8f9fa; /* Cambia el fondo cuando el mouse pasa por encima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra para un efecto de profundidad */
+  transform: scale(1.05); /* Efecto de zoom suave */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Asegura que los textos dentro de la card no cambien */
+.card-body, .card-title, .card-text {
+  color: inherit; /* Hereda el color del texto de la card */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+}
+.invalid {
+  border-color: red;
+}
